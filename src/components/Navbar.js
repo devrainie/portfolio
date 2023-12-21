@@ -22,11 +22,16 @@ export const Navbar = () => {
         // remove evebt listener when component removed
         return () => window.removeEventListener("scroll", whenScrolled);
     }, [])
+
+    // sets the current link when user clicks on nav buttons
+    const updateLink = (link) => {
+        setCurrentLink(link);
+    }
     
 
     return(
         
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className={scrolled ? "scrolled" : "bg-body-tertiary"} >
       <Container>
         <Navbar.Brand href="#home">Rainie</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -36,10 +41,13 @@ export const Navbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {/* main links inside nav bar */}
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">About Me</Nav.Link>
-            <Nav.Link href="#link">Skills</Nav.Link>
-            <Nav.Link href="#link">Projects</Nav.Link>
+            <Nav.Link href="#home" className={currentLink === 'home' ? 'current-link' : 'nav-link'} onClick={() => updateLink('home')}>Home</Nav.Link>
+
+            <Nav.Link href="#link" className={currentLink === 'About Me' ? 'current-link' : 'nav-link'} onClick={() => updateLink('About Me')}>About Me</Nav.Link>
+
+            <Nav.Link href="#link" className={currentLink === 'Skills' ? 'current-link' : 'nav-link'} onClick={() => updateLink('Skills')}>Skills</Nav.Link>
+
+            <Nav.Link href="#link" className={currentLink === 'Projects' ? 'current-link' : 'nav-link'} onClick={() => updateLink('Projects')}>Projects</Nav.Link>
 
 
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
