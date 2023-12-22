@@ -1,0 +1,66 @@
+/* body {
+    background-color: #fcf8f1;
+} */
+
+.col-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*vertical*/
+    align-items: left; /*horizontal*/
+    text-align: left;
+}
+
+.typed-text {
+    font-size: 32px;
+    
+}
+
+/* #hero-txt {
+    margin-left: 0.5em;
+} */
+
+/* .sm-icons {
+    margin-left: 1em;
+} */
+
+.sm-btn {
+    width: 3.5em;
+    height: 3em;
+    background-color: #fcf8f1;
+    border-color: black;
+    z-index: 2;
+}
+
+.col-style .sm-icons .sm-btn{
+    flex-direction: row;
+    justify-content: center; /*vertical*/
+    align-items: left; /*horizontal*/
+}
+
+.sm-icons {
+    display: flex;
+
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    position: relative;
+  }
+
+  .sm-icons:before {
+    content: "";
+    position: absolute;
+    top: 9.5px; 
+    left: 18px; 
+    right: 65px; 
+    bottom: -5px;
+    border: 2px solid #ebadb1; 
+    background-color: #ebadb1; /* Fill color */
+    z-index: 1; /* Move the pseudo-element behind the button */
+    /* background-clip: padding-box; */
+}
+
+  .sm-icons svg {
+    z-index: 1; 
+}
+
+  
