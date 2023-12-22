@@ -1,13 +1,25 @@
-
-
 .App {
   text-align: center;
+  background-color: #fcf8f1;
+  z-index: -1;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Chakra Petch', sans-serif !important;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
