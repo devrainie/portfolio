@@ -1,0 +1,17 @@
+.main-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.nav-btn {
+    background-color: #ebadb1;
+    height: 2em;
+    width: 8em;
+    border-width: 3px;
+    border-color: #c39093;
+    border-top: 0em;
+    border-left: 0em;
+}
+  
+
