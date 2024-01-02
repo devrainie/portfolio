@@ -29,18 +29,18 @@ export default function Landing(){
                         />
                         <p id='hero-txt'>I am currently a junior cloud and dev-ops engineer who also enjoys web development. Recently, i completed the Code First Girls 16 week boot camp on the full stack stream. Scroll to learn more about my journey!</p>
 
-                        <Row>
-                            <Col className='sm-icons'>
+                        <Row className='btn-display'>
+                            <Col xs lg="2" className='sm-icons'>
                                 <button className='sm-btn'><FontAwesomeIcon icon={faInstagram} size="2x"/> </button>
                                 {/* <FontAwesomeIcon icon={faInstagram} size="2x"/> */}
                             </Col>
-                            <Col className='sm-icons'>
+                            <Col xs lg="2" className='sm-icons'>
                                 <button className='sm-btn'>
                                     <FontAwesomeIcon icon={faLinkedin} size="2x"/>
                                 </button>
                                 
                             </Col>
-                            <Col className='sm-icons'>
+                            <Col xs lg="2" className='sm-icons'>
                                 <button className='sm-btn'>
                                     <FontAwesomeIcon icon={faGithub} size="2x"/>
                                 </button>
