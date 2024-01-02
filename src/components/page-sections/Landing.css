@@ -24,43 +24,52 @@
 } */
 
 .sm-btn {
-    width: 3.5em;
-    height: 3em;
+    width: 3.75em; 
+    height: 3.125em; 
     background-color: #fcf8f1;
-    border-color: black;
+    /* border-color: black; */
     z-index: 2;
+    border: 0.1px solid #000;
+    box-shadow: 6px 6px #ebadb1, 6px 6px 0px 0.75px black;
+
 }
 
+.btn-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 800px) {
+    .btn-display{
+      flex-direction: column;
+    }
+    .sm-btn {
+        margin-bottom: 5px;
+    }
+
+  }
+
+
+
+/*
 .col-style .sm-icons .sm-btn{
     flex-direction: row;
     justify-content: center; /*vertical*/
-    align-items: left; /*horizontal*/
-}
+    /*align-items: right; /*horizontal */
+/*}*/
+
 
 .sm-icons {
     display: flex;
 
     height: 50px;
     width: 50px;
-    margin: 10px;
-    position: relative;
+    /* margin: 10px; */
+    position:static;
   }
 
-  .sm-icons:before {
-    content: "";
-    position: absolute;
-    top: 9.5px; 
-    left: 18px; 
-    right: 65px; 
-    bottom: -5px;
-    border: 2px solid #ebadb1; 
-    background-color: #ebadb1; /* Fill color */
-    z-index: 1; /* Move the pseudo-element behind the button */
-    /* background-clip: padding-box; */
-}
 
-  .sm-icons svg {
-    z-index: 1; 
-}
 
   
